@@ -20,15 +20,15 @@ javascript: (function() {
 
     function setTypePayment() { jQuery("#paymentMethodSelectCombobox").val(typeOfPayment).trigger('change') }
 
-    function setCardNumber() { var paymentNumberElement = document.getElementById("CONTROLGROUPPAYMENTBOTTOM_ControlGroupPaymentInputViewPaymentView_ExternalAccount_DM_ACCTNO"); if (paymentNumberElement != null) { paymentNumberElement.value = paymentNumber; } }
+    function setCardNumber() { var paymentNumberElement = document.getElementById("CONTROLGROUPPAYMENTBOTTOM_ControlGroupPaymentInputViewPaymentView_ExternalAccount_undefined_ACCTNO"); if (paymentNumberElement != null) { paymentNumberElement.value = paymentNumber; } }
 
     function setCardNumberCheckin() { var paymentNumberElement = document.getElementById("CONTROLGROUPPAYMENTBOTTOMCheckIn_ControlGroupPaymentInputViewPaymentCheckInView_ExternalAccount_DM_ACCTNO"); if (paymentNumberElement != null) { paymentNumberElement.value = paymentNumber; } }
 
-    function setExpiredDate() { var elementDate = jQuery("#CONTROLGROUPPAYMENTBOTTOM_ControlGroupPaymentInputViewPaymentView_ExternalAccount_DM_EXPDAT_MONTH_YEAR"); if (elementDate != null) { elementDate.val(getDatePayment()).trigger('change'); } }
+    function setExpiredDate() { var elementDate = jQuery("#CONTROLGROUPPAYMENTBOTTOM_ControlGroupPaymentInputViewPaymentView_ExternalAccount_VR_EXPDAT_MONTH_YEAR"); if (elementDate != null) { elementDate.val(getDatePayment()).trigger('change'); } }
 
     function setExpiredDateCheckin() { var elementDate = jQuery("#CONTROLGROUPPAYMENTBOTTOMCheckIn_ControlGroupPaymentInputViewPaymentCheckInView_ExternalAccount_DM_EXPDAT_MONTH_YEAR"); if (elementDate != null) { elementDate.val(getDatePayment()).trigger('change'); } }
 
-    function setSeriesCode() { var element = document.getElementById("CONTROLGROUPPAYMENTBOTTOM_ControlGroupPaymentInputViewPaymentView_ExternalAccount_DM_CC::VerificationCode"); if (element != null) { element.value = cvvValue; } }
+    function setSeriesCode() { var element = document.getElementById("CONTROLGROUPPAYMENTBOTTOM_ControlGroupPaymentInputViewPaymentView_ExternalAccount_VR_CC::VerificationCode"); if (element != null) { element.value = cvvValue; } }
 
     function setSeriesCodeCheckin() { var element = document.getElementById("CONTROLGROUPPAYMENTBOTTOMCheckIn_ControlGroupPaymentInputViewPaymentCheckInView_ExternalAccount_DM_CC::VerificationCode"); if (element != null) { element.value = cvvValue; } }
 
@@ -43,18 +43,19 @@ javascript: (function() {
     function submitBotonSiguienteCheckin() { var element = document.getElementById("CONTROLGROUPPAYMENTBOTTOMCheckIn_ControlGroupPaymentInputViewPaymentCheckInView_LinkButtonSubmit"); if (element != null) { element.click(); } }
 
     function execute() {
+        window.alert("foo");
         setTypePayment(typeOfPayment);
         setHolderName(limiteLetrasNombrePassenger);
-        setHolderNameCheckin(limiteLetrasNombrePassenger);
+        //setHolderNameCheckin(limiteLetrasNombrePassenger);
         setCardNumber();
-        setCardNumberCheckin();
+        //setCardNumberCheckin();
         setExpiredDate();
-        setExpiredDateCheckin();
+        //setExpiredDateCheckin();
         setSeriesCode();
-        setSeriesCodeCheckin();
+        //setSeriesCodeCheckin();
         checkAceptarCondiciones();
         submitBotonSiguiente();
-        submitBotonSiguienteCheckin();
+        //submitBotonSiguienteCheckin();
     }
     execute()
 })();
