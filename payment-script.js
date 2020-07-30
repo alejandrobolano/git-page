@@ -44,17 +44,25 @@ javascript: (function() {
 
     function execute() {
         window.alert("foo");
-        setTypePayment(typeOfPayment);
-        setHolderName(limiteLetrasNombrePassenger);
+        //setTypePayment(typeOfPayment);
+        //setHolderName(limiteLetrasNombrePassenger);
+        
         //setHolderNameCheckin(limiteLetrasNombrePassenger);
-        setCardNumber();
+        
+        //setCardNumber();
+        
         //setCardNumberCheckin();
-        setExpiredDate();
+        
+        //setExpiredDate();
+        
         //setExpiredDateCheckin();
-        setSeriesCode();
+        
+        //setSeriesCode();
+        
         //setSeriesCodeCheckin();
-        checkAceptarCondiciones();
-        submitBotonSiguiente();
+        
+        //checkAceptarCondiciones();
+        //submitBotonSiguiente();
         //submitBotonSiguienteCheckin();
     }
     execute()
